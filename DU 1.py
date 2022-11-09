@@ -1,0 +1,90 @@
+DU 1
+
+1. Dědictví:
+>>> 1256983%28
+7
+
+2. Ověření matematických výsledků:
+>>> (12**52)%15 < 8 or 3**5 > 100
+True
+>>> 5*3**3 != 900/75
+True
+
+3. Balení do závorek nebo množení písmen:
+>>> '[()]'[:2:] + 'PYTHON' + '[()]'[2::]
+'[(PYTHON)]'
+>>> 'Python'[4::]*4
+'onononon'
+>>> 'perl'[2:3:]*6
+'rrrrrr'
+
+4. Hrátky s řetězci:
+>>> 'python'[:3:].upper() + 'python'[3::]
+'PYThon'
+
+>>> n = len('python')
+>>> 'python'[:1:]*n
+'pppppp'
+>>> n = len('git')
+>>> 'git'[:1:]*n
+'ggg'
+
+5. Vyřešení chyby:
+Ve řtvrtém příkazu se pokoušíme k textu přičíst číslo, proto je hlášen error.
+
+6. Hobby proměnná:
+>>> my_hobby = 'playing D&D'
+>>> print('My hobby is ' + my_hobby)
+My hobby is playing D&D
+
+>>> year = '2018'
+>>> month = '11'
+>>> day = '01'
+>>> f"{year}-{month}-{day}"
+'2018-11-01'
+>>> f"{day}/{month}"
+'01/11'
+
+7. Práce se seznamy:
+>>> list = ['D&D','pc games', 'piano']
+>>> print(list[0])
+D&D
+>>> print(list[2])
+piano
+>>> del list[2]
+
+8. Řazení měst:
+cities = ['Prague', 'Brno', 'Ostrava', 'Plzen', 'Liberec', 'Olomouc', 'Usti nad Labem', 'Hradec Kralove', 'Ceske Budejovice', 'Pardubice']
+>>> cities.sort()
+>>> cities
+['Brno', 'Ceske Budejovice', 'Hradec Kralove', 'Liberec', 'Olomouc', 'Ostrava', 'Pardubice', 'Plzen', 'Prague', 'Usti nad Labem']
+>>> print('*'.join(cities))
+Brno*Ceske Budejovice*Hradec Kralove*Liberec*Olomouc*Ostrava*Pardubice*Plzen*Prague*Usti nad Labem
+
+9. Zen of Python:
+>>> zen = "Beautiful is better than ugly. Explicit is better than implicit. Simple is better than complex. Complex is better than complicated. Flat is better than nested. Sparse is better than dense. Readability counts. Special cases aren't special enough to break the rules. Although practicality beats purity. Errors should never pass silently. Unless explicitly silenced. In the face of ambiguity, refuse the temptation to guess. There should be one-- and preferably only one --obvious way to do it. Although that way may not be obvious at first unless you're Dutch. Now is better than never. Although never is often better than *right* now. If the implementation is hard to explain, it's a bad idea. If the implementation is easy to explain, it may be a good idea."
+>>> alphabet = 'abcdefghijklmnopqrstuvwxyz'
+>>> zen = zen.lower()
+>>> zen = list(zen)
+>>> alphabet = list(alphabet)
+>>> zen = set(zen)
+>>> alphabet = set(alphabet)
+>>> g_dif = alphabet.difference(zen)
+>>> g_dif
+{'z', 'q', 'j'}
+
+10. Odstranění ze slovníku :
+>>> d = {'payton':'An interpreted, object-oriented programming language'}
+>>> d = list(d)
+>>> d[0] = 'python'
+>>> d.append('An interpreted, object-oriented programming language')
+>>> d = set(d)
+
+11. Práce se slovníkem:
+>>> dictionary = {('Stepan','Chrast'): '777777777'}
+
+>>> info = {('Name', 'Surname'):('John', 'Doe')}
+>>> d_list = info.values()
+>>> d_str = str(d_list)
+>>> print(d_str[14:20:] + '_' + d_str[22:27:])
+
